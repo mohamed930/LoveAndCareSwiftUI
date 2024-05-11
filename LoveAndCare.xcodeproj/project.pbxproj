@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		D3AB2D312BF0033A001F0B11 /* LoveAndCareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AB2D302BF0033A001F0B11 /* LoveAndCareApp.swift */; };
-		D3AB2D332BF0033A001F0B11 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AB2D322BF0033A001F0B11 /* ContentView.swift */; };
+		D3AB2D332BF0033A001F0B11 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AB2D322BF0033A001F0B11 /* MainScreenView.swift */; };
 		D3AB2D352BF0033B001F0B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3AB2D342BF0033B001F0B11 /* Assets.xcassets */; };
 		D3AB2D382BF0033B001F0B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3AB2D372BF0033B001F0B11 /* Preview Assets.xcassets */; };
+		D3AB2D432BF0045F001F0B11 /* chimeup.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D3AB2D412BF0045F001F0B11 /* chimeup.mp3 */; };
+		D3AB2D442BF0045F001F0B11 /* success.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D3AB2D422BF0045F001F0B11 /* success.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D3AB2D2D2BF0033A001F0B11 /* LoveAndCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveAndCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3AB2D302BF0033A001F0B11 /* LoveAndCareApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveAndCareApp.swift; sourceTree = "<group>"; };
-		D3AB2D322BF0033A001F0B11 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D3AB2D322BF0033A001F0B11 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		D3AB2D342BF0033B001F0B11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3AB2D372BF0033B001F0B11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D3AB2D412BF0045F001F0B11 /* chimeup.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chimeup.mp3; sourceTree = "<group>"; };
+		D3AB2D422BF0045F001F0B11 /* success.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = success.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +55,9 @@
 		D3AB2D2F2BF0033A001F0B11 /* LoveAndCare */ = {
 			isa = PBXGroup;
 			children = (
-				D3AB2D302BF0033A001F0B11 /* LoveAndCareApp.swift */,
-				D3AB2D322BF0033A001F0B11 /* ContentView.swift */,
+				D3AB2D3E2BF0034C001F0B11 /* Starter */,
+				D3AB2D3F2BF00353001F0B11 /* Views */,
+				D3AB2D402BF0045F001F0B11 /* Sounds */,
 				D3AB2D342BF0033B001F0B11 /* Assets.xcassets */,
 				D3AB2D362BF0033B001F0B11 /* Preview Content */,
 			);
@@ -65,6 +70,31 @@
 				D3AB2D372BF0033B001F0B11 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D3AB2D3E2BF0034C001F0B11 /* Starter */ = {
+			isa = PBXGroup;
+			children = (
+				D3AB2D302BF0033A001F0B11 /* LoveAndCareApp.swift */,
+			);
+			path = Starter;
+			sourceTree = "<group>";
+		};
+		D3AB2D3F2BF00353001F0B11 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D3AB2D322BF0033A001F0B11 /* MainScreenView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D3AB2D402BF0045F001F0B11 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				D3AB2D412BF0045F001F0B11 /* chimeup.mp3 */,
+				D3AB2D422BF0045F001F0B11 /* success.m4a */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +155,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3AB2D442BF0045F001F0B11 /* success.m4a in Resources */,
+				D3AB2D432BF0045F001F0B11 /* chimeup.mp3 in Resources */,
 				D3AB2D382BF0033B001F0B11 /* Preview Assets.xcassets in Resources */,
 				D3AB2D352BF0033B001F0B11 /* Assets.xcassets in Resources */,
 			);
@@ -137,7 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3AB2D332BF0033A001F0B11 /* ContentView.swift in Sources */,
+				D3AB2D332BF0033A001F0B11 /* MainScreenView.swift in Sources */,
 				D3AB2D312BF0033A001F0B11 /* LoveAndCareApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,8 +305,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -282,9 +315,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.myorginization199.LoveAndCare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,8 +338,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,9 +348,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.myorginization199.LoveAndCare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
