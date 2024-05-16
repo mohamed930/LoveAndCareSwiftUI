@@ -11,6 +11,8 @@ struct CircleView: View {
     
     @State var color: Color
     
+    @State var animationBool = false
+    
     var body: some View {
         
         ZStack {
@@ -23,6 +25,11 @@ struct CircleView: View {
                 .frame(width: 280, height: 280, alignment: .center)
             
         } // MARK: - ZStack
+        .scaleEffect(animationBool ? 1: 0.5)
+        .animation(.easeOut(duration: 0.9), value: animationBool)
+        .onAppear {
+            animationBool.toggle()
+        }
     }
 }
 

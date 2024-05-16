@@ -9,6 +9,10 @@ import SwiftUI
 
 struct OnBoardingScreen: View {
     
+    @State var animationBool = false
+    
+    @State var imgageOffest = CGSize(width: 0, height: 0)
+    
     var body: some View {
         GeometryReader { geomotery in
             ZStack {
@@ -31,26 +35,56 @@ struct OnBoardingScreen: View {
                             .fixedSize(horizontal: false, vertical: true)
                             .padding(.horizontal,10)
                         
+                        Spacer(minLength: 50)
+                        
+                        
                     } // MARK: - VStack
+                    .offset(y: animationBool ? 0 : -70)
+                    .animation(.easeOut(duration: 0.9), value: animationBool)
+                    .scaledToFit()
                     
                     
                     ZStack {
                         CircleView(color: .white)
+                            .offset(x: -1 * imgageOffest.width)
+                            .blur(radius: abs(imgageOffest.width / 5),opaque: false)
                         
                         Image("happy-pregnant")
                             .resizable()
                             .scaledToFit()
+                            .offset(x: imgageOffest.width)
+                            .rotationEffect(.degrees(imgageOffest.width / 15))
                             .shadow(color: .black.opacity(0.5), radius: 8.0, x: 3, y: 3)
+                            .frame(width: 300)
                             .overlay(
                                 Image(systemName: "arrow.left.and.right.circle")
                                     .font(.system(size: 40,weight: .ultraLight, design: .rounded))
-                                    .foregroundColor(.white) ,
+                                    .foregroundColor(.white)
+                                    .opacity(imgageOffest.width == 0 ? 1: 0),
                                 
                                 alignment: .bottom
                             )
+                            .gesture(DragGesture()
+                                .onChanged({ guester in
+                                    if abs(guester.translation.width) <= 150 {
+                                        imgageOffest = guester.translation
+                                    }
+                                    
+                                })
+                                     
+                                    .onEnded({ _ in
+                                        
+                                        withAnimation(.easeOut(duration: 0.8)) {
+                                            imgageOffest = .zero
+                                        }
+                                        
+                                        
+                                    })
+                            )
                         
-                        Spacer() // Pushes content to the top
                     } // MARK: - ZStack
+                    
+                    
                     
                     ZStack {
                         
@@ -97,8 +131,9 @@ struct OnBoardingScreen: View {
                     } // MARK: - ZStack
                     .frame(height: 80, alignment: .center)
                     .padding(.horizontal,40)
-                    .padding(.top,20)
-                    
+                    .padding(.top,50)
+                    .offset(y: animationBool ? 0 : 80)
+                    .animation(.easeIn(duration: 0.9), value: animationBool)
                     
                 } // MARK: - VStack
                 
@@ -107,6 +142,9 @@ struct OnBoardingScreen: View {
             } // MARK: - ZStack
             
         } // MARK: - GeometryReader
+        .onAppear {
+            animationBool.toggle()
+        }
     }
 }
 
