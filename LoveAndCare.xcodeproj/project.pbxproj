@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D303E1B72BF76D2D0088FA04 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D303E1B62BF76D2D0088FA04 /* HomeScreen.swift */; };
 		D3AB2D312BF0033A001F0B11 /* LoveAndCareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AB2D302BF0033A001F0B11 /* LoveAndCareApp.swift */; };
 		D3AB2D332BF0033A001F0B11 /* OnBoardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AB2D322BF0033A001F0B11 /* OnBoardingScreen.swift */; };
 		D3AB2D352BF0033B001F0B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3AB2D342BF0033B001F0B11 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D303E1B62BF76D2D0088FA04 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		D3AB2D2D2BF0033A001F0B11 /* LoveAndCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveAndCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3AB2D302BF0033A001F0B11 /* LoveAndCareApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveAndCareApp.swift; sourceTree = "<group>"; };
 		D3AB2D322BF0033A001F0B11 /* OnBoardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingScreen.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				D3AB2D322BF0033A001F0B11 /* OnBoardingScreen.swift */,
+				D303E1B62BF76D2D0088FA04 /* HomeScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D303E1B72BF76D2D0088FA04 /* HomeScreen.swift in Sources */,
 				D3ED5A372BF61A8100EFB6C1 /* CircleView.swift in Sources */,
 				D3AB2D332BF0033A001F0B11 /* OnBoardingScreen.swift in Sources */,
 				D3AB2D312BF0033A001F0B11 /* LoveAndCareApp.swift in Sources */,

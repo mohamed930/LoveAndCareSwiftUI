@@ -13,6 +13,10 @@ struct OnBoardingScreen: View {
     
     @State var imgageOffest = CGSize(width: 0, height: 0)
     
+    @State var buttonOffest: CGFloat = 0.0
+    
+    @State var buttonSize = UIScreen.main.bounds.width - 160
+    
     var body: some View {
         GeometryReader { geomotery in
             ZStack {
@@ -72,14 +76,14 @@ struct OnBoardingScreen: View {
                                     
                                 })
                                      
-                                    .onEnded({ _ in
-                                        
-                                        withAnimation(.easeOut(duration: 0.8)) {
-                                            imgageOffest = .zero
-                                        }
-                                        
-                                        
-                                    })
+                                .onEnded({ _ in
+                                    
+                                    withAnimation(.easeOut(duration: 0.8)) {
+                                        imgageOffest = .zero
+                                    }
+                                    
+                                    
+                                })
                             )
                         
                     } // MARK: - ZStack
@@ -102,7 +106,7 @@ struct OnBoardingScreen: View {
                         HStack {
                             Capsule()
                                 .fill(Color("ColorRed"))
-                                .frame(width: 80)
+                                .frame(width: 80 + buttonOffest)
                             
                             Spacer()
                         }
@@ -122,6 +126,27 @@ struct OnBoardingScreen: View {
                                 
                             }
                             .frame(width: 80)
+                            .offset(x: buttonOffest)
+                            .gesture(DragGesture()
+                                .onChanged({ guester in
+                                    
+                                    if guester.translation.width > 0 && guester.translation.width < buttonSize {
+                                        buttonOffest = guester.translation.width
+                                    }
+                                })
+                                     
+                                    .onEnded({ _ in
+                                        if buttonOffest > buttonSize / 2 {
+                                            
+                                        }
+                                        else {
+                                            withAnimation(.easeOut(duration: 0.8)) {
+                                                buttonOffest = 0.0
+                                            }
+                                        }
+                                    })
+                            
+                            )
                             
                             Spacer()
                             
@@ -140,6 +165,8 @@ struct OnBoardingScreen: View {
                 
                 
             } // MARK: - ZStack
+            
+            
             
         } // MARK: - GeometryReader
         .onAppear {
