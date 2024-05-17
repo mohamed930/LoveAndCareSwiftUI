@@ -19,6 +19,8 @@ struct OnBoardingScreen: View {
     
     @State private var shouldNavigate = false
     
+    @AppStorage("status") var status = false
+    
     var body: some View {
         GeometryReader { geomotery in
             
@@ -80,14 +82,14 @@ struct OnBoardingScreen: View {
                                         
                                     })
                                          
-                                    .onEnded({ _ in
-                                        
-                                        withAnimation(.easeOut(duration: 0.8)) {
-                                            imgageOffest = .zero
-                                        }
-                                        
-                                        
-                                    })
+                                        .onEnded({ _ in
+                                            
+                                            withAnimation(.easeOut(duration: 0.8)) {
+                                                imgageOffest = .zero
+                                            }
+                                            
+                                            
+                                        })
                                 )
                             
                         } // MARK: - ZStack
@@ -141,6 +143,12 @@ struct OnBoardingScreen: View {
                                          
                                         .onEnded({ _ in
                                             if buttonOffest > buttonSize / 2 {
+                                                
+                                                status.toggle()
+                                                
+                                                PlaySound.shared.setData(fileName: "chimeup", fileType: "mp3")
+                                                PlaySound.shared.playSound()
+                                                
                                                 shouldNavigate.toggle()
                                                 
                                                 withAnimation(.easeOut(duration: 0.8)) {
@@ -153,7 +161,7 @@ struct OnBoardingScreen: View {
                                                 }
                                             }
                                         })
-                                
+                                         
                                 )
                                 NavigationLink("", destination: HomeScreen(),isActive: $shouldNavigate)
                                 

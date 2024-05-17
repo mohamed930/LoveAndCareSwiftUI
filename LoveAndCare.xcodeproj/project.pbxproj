@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D303E1B72BF76D2D0088FA04 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D303E1B62BF76D2D0088FA04 /* HomeScreen.swift */; };
+		D395AD772BF806B500D408FA /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = D395AD762BF806B500D408FA /* PlaySound.swift */; };
 		D3AB2D312BF0033A001F0B11 /* LoveAndCareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AB2D302BF0033A001F0B11 /* LoveAndCareApp.swift */; };
 		D3AB2D332BF0033A001F0B11 /* OnBoardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AB2D322BF0033A001F0B11 /* OnBoardingScreen.swift */; };
 		D3AB2D352BF0033B001F0B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3AB2D342BF0033B001F0B11 /* Assets.xcassets */; };
@@ -19,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		D303E1B62BF76D2D0088FA04 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		D395AD742BF8040900D408FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D395AD762BF806B500D408FA /* PlaySound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
 		D3AB2D2D2BF0033A001F0B11 /* LoveAndCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveAndCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3AB2D302BF0033A001F0B11 /* LoveAndCareApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveAndCareApp.swift; sourceTree = "<group>"; };
 		D3AB2D322BF0033A001F0B11 /* OnBoardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingScreen.swift; sourceTree = "<group>"; };
@@ -40,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D395AD752BF806B500D408FA /* Utilits */ = {
+			isa = PBXGroup;
+			children = (
+				D395AD762BF806B500D408FA /* PlaySound.swift */,
+			);
+			path = Utilits;
+			sourceTree = "<group>";
+		};
 		D3AB2D242BF0033A001F0B11 = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +70,8 @@
 		D3AB2D2F2BF0033A001F0B11 /* LoveAndCare */ = {
 			isa = PBXGroup;
 			children = (
+				D395AD742BF8040900D408FA /* Info.plist */,
+				D395AD752BF806B500D408FA /* Utilits */,
 				D3AB2D3E2BF0034C001F0B11 /* Starter */,
 				D3ED5A352BF6198F00EFB6C1 /* componts */,
 				D3AB2D3F2BF00353001F0B11 /* Views */,
@@ -183,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D395AD772BF806B500D408FA /* PlaySound.swift in Sources */,
 				D303E1B72BF76D2D0088FA04 /* HomeScreen.swift in Sources */,
 				D3ED5A372BF61A8100EFB6C1 /* CircleView.swift in Sources */,
 				D3AB2D332BF0033A001F0B11 /* OnBoardingScreen.swift in Sources */,
@@ -318,6 +332,7 @@
 				DEVELOPMENT_TEAM = 9DRYUUNTK3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LoveAndCare/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -351,6 +366,7 @@
 				DEVELOPMENT_TEAM = 9DRYUUNTK3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LoveAndCare/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -9,9 +9,20 @@ import SwiftUI
 
 @main
 struct LoveAndCareApp: App {
+    
+    @AppStorage("status") var status = false
+    
     var body: some Scene {
         WindowGroup {
-            OnBoardingScreen()
+            
+            if status {
+                HomeScreen()
+            }
+            else {
+                OnBoardingScreen()
+            }
+            
+            
         }
     }
 }
