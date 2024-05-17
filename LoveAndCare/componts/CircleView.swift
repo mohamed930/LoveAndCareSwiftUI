@@ -28,7 +28,10 @@ struct CircleView: View {
         .scaleEffect(animationBool ? 1: 0.5)
         .animation(.easeOut(duration: 0.9), value: animationBool)
         .onAppear {
-            animationBool.toggle()
+            if animationBool == false {
+                animationBool.toggle()
+            }
+            
         }
     }
 }

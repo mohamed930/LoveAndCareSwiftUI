@@ -9,7 +9,22 @@ import SwiftUI
 
 struct HomeScreen: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        NavigationView {
+        
+            ZStack {
+                ZStack {
+                    CircleView(color: .gray)
+                    
+                    Image("baby-boy")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 450,alignment: .center)
+                }
+            }
+            
+        } // MARK: - NavigationView
+        .navigationBarBackButtonHidden()
     }
 }
 
